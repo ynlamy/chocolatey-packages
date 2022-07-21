@@ -14,4 +14,5 @@ Windows command-line utility to calculate the checksum of a file.
 ### Examples
 
 `choco install hash`
+
 `choco install hash --params "'/UseInf:C:\hash.inf'"`
