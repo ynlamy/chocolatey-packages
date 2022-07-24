@@ -1,13 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = "$toolsDir\hash_setup.exe"
-
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = $fileLocation
+  url            = 'https://github.com/ynlamy/hash/releases/download/1.1/hash_setup.exe'
   softwareName   = 'hash*'
+  checksum       = '64f345051ebd1d64b79ca284c992d5b2c762e725a1d9b996b662964636a87a6f'
+  checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
 }
@@ -23,6 +22,4 @@ if ($pp.UseInf) {
   }
 }
 
-Install-ChocolateyInstallPackage @packageArgs
-
-Remove-Item $fileLocation -ea 0 -Force
+Install-ChocolateyPackage @packageArgs
