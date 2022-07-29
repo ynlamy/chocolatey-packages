@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wol</id>
+    <version>1.0</version>
+    <title>wol</title>
+    <authors>Yoann LAMY</authors>
+    <owners>ynlamy</owners>
+    <projectUrl>https://github.com/ynlamy/wol</projectUrl>
+    <licenseUrl>https://github.com/ynlamy/wol/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Windows command-line utility for remotely waking up computers by sending magic packets over the network.
+
+## Features
+
+- Directly specify the MAC addresses to wake up (multiple MAC addresses allowed)
+- Use a text file containing MAC addresses to wake up (one MAC address per line)
+- Destination IP address or destination UDP port number can be specified
+
+## Package Parameters
+
+- `/UseInf:` - Change the inno setup configuration file to use/save when installing
+
+### Examples
+
+`choco install wol`
+
+`choco install wol --params "'/UseInf:C:\wol.inf'"`</description>
+    <summary>Windows command-line utility for remotely waking up computers by sending magic packets over the network.</summary>
+    <tags>wol wake lan</tags>
+    <projectSourceUrl>https://github.com/ynlamy/wol</projectSourceUrl>
+    <docsUrl>https://github.com/ynlamy/wol</docsUrl>
+    <packageSourceUrl>https://github.com/ynlamy/chocolatey-packages/tree/main/wol</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+</package>
