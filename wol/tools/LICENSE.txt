@@ -1,5 +1,0 @@
-﻿LICENSE
-
-This program have been created by Yoann LAMY under the terms of the GNU General Public License v3 <http://www.gnu.org/licenses/gpl.html>.
-
-CREDITS : Portions of this program are Copyright (c) 1993 - 2018, Chad Z. Hower (Kudzu) and the Indy Pit Crew - <http://www.indyproject.org/>.
